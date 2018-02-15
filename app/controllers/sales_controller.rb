@@ -9,7 +9,7 @@ class SalesController < ApplicationController
 
   def create
 
-    cod = params['sale']['cod'].to_i
+    cod = DateTime.now.to_i
     detail = params['sale']['detail']
     category = params['sale']['category'].to_i
     discount = params['sale']['discount'].to_i
