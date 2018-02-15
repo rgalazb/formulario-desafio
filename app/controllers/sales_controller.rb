@@ -15,7 +15,7 @@ class SalesController < ApplicationController
     discount = params['sale']['discount'].to_i
     value = params['sale']['value'].to_i
     total = (100-discount) * value
-    if params.has_key?(:tax)
+    if !params.has_key?(:tax)
       tax = 19
       total *= 1.19
     else
