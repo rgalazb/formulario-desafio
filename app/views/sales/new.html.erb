@@ -1,0 +1,23 @@
+<%= form_with model: @sale, url: '/sales/create', local: true do |f| %>
+
+  <%= f.label :detalle %>
+  <%= f.text_area :detail,id: :sale_detail %>
+  <br>
+  <%= f.label :categoría %>
+  <%= f.text_field :category, id: :sale_category %>
+  <br>
+  <%= f.label :valor %>
+  <%= f.number_field :value, id: :sale_value %>
+  <br>
+  <%= f.label :descuento %>
+  <%= f.number_field :discount, id: :sale_discount %>
+  <br>
+  <%= check_box_tag(:tax) %>
+  <%= label_tag(:tax, "Excento de iva") %>
+  <br>
+  <%= f.label :código %>
+  <%= f.number_field :cod, id: :sale_cod %>
+  <br>
+
+  <%= f.submit 'Envíar'%>
+<% end %>
